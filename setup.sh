@@ -66,8 +66,8 @@ ruby -v >> $logfile
 echo "FINISH: Ruby has been installed!" >> $logfile
 
 ## clone the project  ##
-echo "START: Set up hyaku project!" >> $logfile
-echo "START: Set up hyaku project!"
+echo "START: Set up the project!" >> $logfile
+echo "START: Set up the project!"
 dir=`pwd`
 echo "Your remote origin please:"
 read origin
@@ -90,7 +90,7 @@ echo "DB migrate!" >> $logfile
 rake db:migrate >> $logfile
 echo "DB seed!" >> $logfile
 rake db:seed >> $logfile
-echo "FINISH: hyaku has been set up!" >> $logfile
+echo "FINISH: the project has been set up!" >> $logfile
 
 echo "SET UP FINISHED!"
 echo "SET UP FINISHED!" >> $logfile
