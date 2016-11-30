@@ -29,6 +29,13 @@ git config --global alias.hist log --pretty=format:'%h %ad | %s%d [%an]' --graph
 cat ~/.gitconfig >> $logfile
 echo "FINISH: Git set up completed!" >> $logfile
 
+## vimrc settings
+git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+echo "INSTALLED AWSOME vimrc!"
+echo "INSTALLED AWSOME vimrc!" >> $logfile
+
 ## Ruby install  ##
 echo "START: Ruby install!" >> $logfile
 echo "START: Ruby install!"
@@ -64,3 +71,10 @@ rbenv install $fversion
 
 gem install bundler
 gem env home
+
+# Install npm
+echo "START: NPM INSTALL!"
+echo "START: NPM INSTALL!" >> $logfile
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+source ~/.bashrc
+nvm install node
